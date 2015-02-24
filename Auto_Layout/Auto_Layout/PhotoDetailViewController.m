@@ -28,7 +28,7 @@
     
     [self.collectionView registerNib:[UINib nibWithNibName:@"PhotoDetailCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:kPhotoDetailCellId];
     
-    NSLog(@"Iam in ViewdidLoad");
+    NSLog(@"Iam in ViewdidLoad and in india");
 }
 
 - (void)didReceiveMemoryWarning {
