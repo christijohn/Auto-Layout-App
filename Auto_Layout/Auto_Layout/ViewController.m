@@ -29,6 +29,7 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"NewsTableViewCell" bundle:nil] forCellReuseIdentifier:kNewsCellIdentifier];
     _items = @[@"How do you use Auto Layout within UITableViewCells in a table view to let each cell's content",@"In your UITableViewCell subclass, add constraints so that the subviews of the cell have their edges pinned to the edges of the cell's contentView (most importantly to the top AND bottom edges). NOTE",@"Remember, the idea is to have the cell's subviews connected vertically",@"You can imagine that as more text is added to the multi-line body label in the example cell above, it will need to grow vertically to fit the text, which will effectively force the cell to grow in height. (Of course, you need to get the constraints right in order for this to work correctly!)",@"Getting your constraints right is definitely",@"dynamic cell heights working with Auto Layout.",@"Its working macha...!!!"];
     
+    NSLog(@"github");
 }
 
 -(void)viewWillAppear:(BOOL)animated{
