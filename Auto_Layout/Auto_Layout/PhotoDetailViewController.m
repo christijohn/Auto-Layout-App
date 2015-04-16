@@ -68,9 +68,9 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    cell.contentView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.collectionView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[PhotoDetailCell]|" options:0 metrics:nil views:@{ @"PhotoDetailCell": cell.contentView }]];
-    [self.collectionView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[PhotoDetailCell]|" options:0 metrics:nil views:@{ @"PhotoDetailCell": cell.contentView }]];
+    //cell.contentView.translatesAutoresizingMaskIntoConstraints = NO;
+    //[self.collectionView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[PhotoDetailCell]|" options:0 metrics:nil views:@{ @"PhotoDetailCell": cell.contentView }]];
+    //[self.collectionView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[PhotoDetailCell]|" options:0 metrics:nil views:@{ @"PhotoDetailCell": cell.contentView }]];
 
 
 }

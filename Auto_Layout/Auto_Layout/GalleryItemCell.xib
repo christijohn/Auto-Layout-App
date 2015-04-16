@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GalleryItemCellId" id="gTV-IL-0wX" customClass="GalleryItemCell">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="215"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="215"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="vga-dN-5Cz">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="139"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="vga-dN-5Cz" secondAttribute="height" multiplier="150:139" id="HP2-ah-T34"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Title and Description" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7X-sy-5vK">
+                        <rect key="frame" x="8" y="146" width="134" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="48" id="iVf-Nw-k3P"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="14 min ago" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3d-w4-FvE">
+                        <rect key="frame" x="8" y="192" width="129" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="eVD-Ac-gI5"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="eVD-Ac-gI5"/>
+                            </mask>
+                        </variation>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="vga-dN-5Cz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2S8-8B-s0F"/>
+                <constraint firstAttribute="trailing" secondItem="vga-dN-5Cz" secondAttribute="trailing" id="CDp-63-sXS"/>
+                <constraint firstAttribute="bottom" secondItem="n3d-w4-FvE" secondAttribute="bottom" constant="4" id="L16-Jz-i7c"/>
+                <constraint firstAttribute="trailing" secondItem="n3d-w4-FvE" secondAttribute="trailing" constant="13" id="MTw-zi-DY8"/>
+                <constraint firstItem="n3d-w4-FvE" firstAttribute="top" secondItem="g7X-sy-5vK" secondAttribute="bottom" constant="-2" id="MUA-nL-B2o"/>
+                <constraint firstAttribute="trailing" secondItem="g7X-sy-5vK" secondAttribute="trailing" constant="8" id="SeB-Pb-v7E"/>
+                <constraint firstItem="vga-dN-5Cz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="TD8-an-Vov"/>
+                <constraint firstItem="g7X-sy-5vK" firstAttribute="top" secondItem="vga-dN-5Cz" secondAttribute="bottom" constant="7" id="VID-E5-dEz"/>
+                <constraint firstItem="n3d-w4-FvE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="g1X-eI-O08"/>
+                <constraint firstItem="g7X-sy-5vK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="wR3-QF-dw7"/>
+            </constraints>
+            <size key="customSize" width="150" height="215"/>
+            <point key="canvasLocation" x="513" y="311.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="photo" width="420" height="640"/>
+    </resources>
+</document>

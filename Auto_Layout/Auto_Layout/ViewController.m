@@ -9,9 +9,13 @@
 #import "ViewController.h"
 #import "NewsTableViewCell.h"
 #import "PhotoListViewController.h"
+#import "GalleryViewController.h"
+#import "ShareViewController.h"
 
 #define kNewsCellIdentifier @"kNewsCellIdentifier"
 #define kPhotoListVC @"kPhotoListVC"
+#define kGalleryVC @"kGalleryVC"
+#define kShareVC @"kShareViewController"
 
 @interface ViewController ()
 
@@ -104,9 +108,27 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    PhotoListViewController *photoList = [mainStoryBoard instantiateViewControllerWithIdentifier:kPhotoListVC];
-    [self.navigationController pushViewController:photoList animated:YES];
+    if(indexPath.row == 0){
+        
+        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        PhotoListViewController *photoList = [mainStoryBoard instantiateViewControllerWithIdentifier:kPhotoListVC];
+        [self.navigationController pushViewController:photoList animated:YES];
+
+    }
+    else if(indexPath.row == 1){
+        
+        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        ShareViewController *shareVC = [mainStoryBoard instantiateViewControllerWithIdentifier:kShareVC];
+        [self.navigationController pushViewController:shareVC animated:YES];
+        
+    }
+    else{
+        
+        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        GalleryViewController *galleryList = [mainStoryBoard instantiateViewControllerWithIdentifier:kGalleryVC];
+        [self.navigationController pushViewController:galleryList animated:YES];
+
+    }
 }
 
 - (void)didReceiveMemoryWarning {

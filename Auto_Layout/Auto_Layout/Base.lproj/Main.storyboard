@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -211,5 +211,154 @@
             </objects>
             <point key="canvasLocation" x="832" y="420"/>
         </scene>
+        <!--Gallery View Controller-->
+        <scene sceneID="nMA-gB-5d5">
+            <objects>
+                <viewController storyboardIdentifier="kGalleryVC" id="YEA-nh-HZH" customClass="GalleryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3hs-Vd-xmD"/>
+                        <viewControllerLayoutGuide type="bottom" id="5qG-Wi-4Oy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vyq-WO-9Ku">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0jQ-Xb-i7e">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="gQV-MX-NHV"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4gt-nf-Ga7">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="mqi-WC-kuS">
+                                    <size key="itemSize" width="150" height="215"/>
+                                    <size key="headerReferenceSize" width="320" height="300"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="KR4-bJ-ULK">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="215"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <size key="customSize" width="150" height="215"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="kGAlleryHeaderViewId" id="cMx-C7-6Nc">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="YEA-nh-HZH" id="AEB-C4-eeq"/>
+                                    <outlet property="delegate" destination="YEA-nh-HZH" id="dWo-vJ-f01"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4gt-nf-Ga7" firstAttribute="top" secondItem="0jQ-Xb-i7e" secondAttribute="bottom" id="3u8-sr-nf0"/>
+                            <constraint firstAttribute="trailing" secondItem="4gt-nf-Ga7" secondAttribute="trailing" id="8Z3-eD-5t9"/>
+                            <constraint firstItem="4gt-nf-Ga7" firstAttribute="leading" secondItem="Vyq-WO-9Ku" secondAttribute="leading" id="DNC-Sd-hQV"/>
+                            <constraint firstItem="0jQ-Xb-i7e" firstAttribute="top" secondItem="3hs-Vd-xmD" secondAttribute="bottom" id="Xrc-1D-V7U"/>
+                            <constraint firstItem="5qG-Wi-4Oy" firstAttribute="top" secondItem="4gt-nf-Ga7" secondAttribute="bottom" id="fl8-pg-yBQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0jQ-Xb-i7e" secondAttribute="trailing" constant="-16" id="jaW-6t-J3z"/>
+                            <constraint firstItem="0jQ-Xb-i7e" firstAttribute="leading" secondItem="Vyq-WO-9Ku" secondAttribute="leadingMargin" constant="-16" id="uUn-iF-uFT"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="collectionView" destination="4gt-nf-Ga7" id="usv-aq-DOT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HKI-7H-j16" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1210" y="420"/>
+        </scene>
+        <!--Share View Controller-->
+        <scene sceneID="ITT-EU-c5y">
+            <objects>
+                <viewController storyboardIdentifier="kShareViewController" id="Sco-e0-uT8" customClass="ShareViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qhz-mM-5p4"/>
+                        <viewControllerLayoutGuide type="bottom" id="MLO-FU-ej6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d3r-aI-UHC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGb-S3-qGA">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwO-p1-Z0Q">
+                                        <rect key="frame" x="254" y="7" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="YxS-q0-Qgy"/>
+                                        </constraints>
+                                        <state key="normal" title="Share">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shareAction:" destination="Sco-e0-uT8" eventType="touchUpInside" id="Meq-wc-Uoj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="WwO-p1-Z0Q" firstAttribute="top" secondItem="uGb-S3-qGA" secondAttribute="top" constant="7" id="DH0-qY-hEZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="WwO-p1-Z0Q" secondAttribute="bottom" constant="7" id="Tda-8T-5vf"/>
+                                    <constraint firstAttribute="trailing" secondItem="WwO-p1-Z0Q" secondAttribute="trailing" constant="20" id="aGv-is-1XP"/>
+                                    <constraint firstAttribute="height" constant="44" id="xzd-5t-CJd"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="template1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mcU-qK-NmX">
+                                <rect key="frame" x="10" y="84" width="300" height="400"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MwX-yb-fxa">
+                                <rect key="frame" x="85" y="518" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="tkg-Xq-cPi"/>
+                                </constraints>
+                                <state key="normal" title="Save Image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveImage:" destination="Sco-e0-uT8" eventType="touchUpInside" id="mzs-lr-kKc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mcU-qK-NmX" firstAttribute="top" secondItem="uGb-S3-qGA" secondAttribute="bottom" constant="20" id="7md-A8-kzx"/>
+                            <constraint firstItem="MwX-yb-fxa" firstAttribute="leading" secondItem="d3r-aI-UHC" secondAttribute="leadingMargin" constant="69" id="Gs2-Nv-64S"/>
+                            <constraint firstAttribute="trailing" secondItem="mcU-qK-NmX" secondAttribute="trailing" constant="10" id="NTK-uH-RDe"/>
+                            <constraint firstItem="MLO-FU-ej6" firstAttribute="top" secondItem="MwX-yb-fxa" secondAttribute="bottom" constant="20" id="Oyy-PG-mgN"/>
+                            <constraint firstItem="uGb-S3-qGA" firstAttribute="top" secondItem="qhz-mM-5p4" secondAttribute="bottom" id="P2z-ny-tWx"/>
+                            <constraint firstItem="uGb-S3-qGA" firstAttribute="leading" secondItem="d3r-aI-UHC" secondAttribute="leading" id="Q5d-vB-EHn"/>
+                            <constraint firstItem="mcU-qK-NmX" firstAttribute="leading" secondItem="d3r-aI-UHC" secondAttribute="leading" constant="10" id="Qqz-zT-AF8"/>
+                            <constraint firstAttribute="trailing" secondItem="uGb-S3-qGA" secondAttribute="trailing" id="f98-5i-gct"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MwX-yb-fxa" secondAttribute="trailing" constant="69" id="niE-9a-VSR"/>
+                            <constraint firstItem="MLO-FU-ej6" firstAttribute="top" secondItem="mcU-qK-NmX" secondAttribute="bottom" constant="84" id="vy1-AW-iey"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="shareImageView" destination="mcU-qK-NmX" id="7o2-pj-Ptu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bfh-Fm-u3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1596" y="420"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="template1.jpg" width="310" height="272"/>
+    </resources>
 </document>
