@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -317,8 +319,11 @@
                                     <constraint firstAttribute="height" constant="44" id="xzd-5t-CJd"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="template1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mcU-qK-NmX">
-                                <rect key="frame" x="10" y="84" width="300" height="400"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="modi_ndtv.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mcU-qK-NmX">
+                                <rect key="frame" x="0.0" y="84" width="320" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mcU-qK-NmX" secondAttribute="height" multiplier="4:3" id="686-a0-xJz"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MwX-yb-fxa">
                                 <rect key="frame" x="85" y="518" width="150" height="30"/>
@@ -335,17 +340,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="mcU-qK-NmX" firstAttribute="width" secondItem="d3r-aI-UHC" secondAttribute="height" multiplier="40:71" id="5Hr-77-2mL"/>
                             <constraint firstItem="mcU-qK-NmX" firstAttribute="top" secondItem="uGb-S3-qGA" secondAttribute="bottom" constant="20" id="7md-A8-kzx"/>
                             <constraint firstItem="MwX-yb-fxa" firstAttribute="leading" secondItem="d3r-aI-UHC" secondAttribute="leadingMargin" constant="69" id="Gs2-Nv-64S"/>
-                            <constraint firstAttribute="trailing" secondItem="mcU-qK-NmX" secondAttribute="trailing" constant="10" id="NTK-uH-RDe"/>
+                            <constraint firstAttribute="trailing" secondItem="mcU-qK-NmX" secondAttribute="trailing" id="NTK-uH-RDe"/>
                             <constraint firstItem="MLO-FU-ej6" firstAttribute="top" secondItem="MwX-yb-fxa" secondAttribute="bottom" constant="20" id="Oyy-PG-mgN"/>
                             <constraint firstItem="uGb-S3-qGA" firstAttribute="top" secondItem="qhz-mM-5p4" secondAttribute="bottom" id="P2z-ny-tWx"/>
                             <constraint firstItem="uGb-S3-qGA" firstAttribute="leading" secondItem="d3r-aI-UHC" secondAttribute="leading" id="Q5d-vB-EHn"/>
-                            <constraint firstItem="mcU-qK-NmX" firstAttribute="leading" secondItem="d3r-aI-UHC" secondAttribute="leading" constant="10" id="Qqz-zT-AF8"/>
+                            <constraint firstItem="mcU-qK-NmX" firstAttribute="leading" secondItem="d3r-aI-UHC" secondAttribute="leading" id="Qqz-zT-AF8"/>
                             <constraint firstAttribute="trailing" secondItem="uGb-S3-qGA" secondAttribute="trailing" id="f98-5i-gct"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MwX-yb-fxa" secondAttribute="trailing" constant="69" id="niE-9a-VSR"/>
-                            <constraint firstItem="MLO-FU-ej6" firstAttribute="top" secondItem="mcU-qK-NmX" secondAttribute="bottom" constant="84" id="vy1-AW-iey"/>
+                            <constraint firstItem="MLO-FU-ej6" firstAttribute="top" secondItem="mcU-qK-NmX" secondAttribute="bottom" constant="244" id="vy1-AW-iey"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5Hr-77-2mL"/>
+                            </mask>
+                        </variation>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
@@ -359,6 +370,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="template1.jpg" width="310" height="272"/>
+        <image name="modi_ndtv.jpg" width="240" height="180"/>
     </resources>
 </document>

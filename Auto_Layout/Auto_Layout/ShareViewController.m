@@ -27,10 +27,13 @@
 
 - (IBAction)shareAction:(id)sender {
     
-    UIImage *shareImage = [UIImage imageNamed:@"template1.jpg"];
-    shareImage = [self applyBlurOnImage:shareImage withRadius:5];
-    shareImage = [self drawText:sampleText inImage:shareImage atPoint:CGPointMake(10, 10)];
-    shareImage = [self addLogotoImage:shareImage];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"ndtv://News/Latest/32456"]];
+    return;
+    
+    UIImage *shareImage = [UIImage imageNamed:@"modi_ndtv.jpg"];
+    shareImage = [self blurWithCoreImage:shareImage];
+    //shareImage = [self drawText:sampleText inImage:shareImage atPoint:CGPointMake(10, 10)];
+    //shareImage = [self addLogotoImage:shareImage];
     
     _shareImageView.image = shareImage;
     
@@ -95,8 +98,47 @@
     return newImage;
 }
 
-- (UIImage *)applyBlurOnImage: (UIImage *)imageToBlur withRadius: (CGFloat)blurRadius {
-    CIImage *originalImage = [CIImage imageWithCGImage: imageToBlur.CGImage]; CIFilter *filter = [CIFilter filterWithName: @"CIGaussianBlur" keysAndValues: kCIInputImageKey, originalImage, @"inputRadius", @(blurRadius), nil]; CIImage *outputImage = filter.outputImage; CIContext *context = [CIContext contextWithOptions:nil]; CGImageRef outImage = [context createCGImage: outputImage fromRect: [outputImage extent]]; return [UIImage imageWithCGImage: outImage];
+- (UIImage *)blurWithCoreImage:(UIImage *)sourceImage
+{
+    CIImage *inputImage = [CIImage imageWithCGImage:sourceImage.CGImage];
+    
+    // Apply Affine-Clamp filter to stretch the image so that it does not
+    // look shrunken when gaussian blur is applied
+    CGAffineTransform transform = CGAffineTransformIdentity;
+    CIFilter *clampFilter = [CIFilter filterWithName:@"CIAffineClamp"];
+    [clampFilter setValue:inputImage forKey:@"inputImage"];
+    [clampFilter setValue:[NSValue valueWithBytes:&transform objCType:@encode(CGAffineTransform)] forKey:@"inputTransform"];
+    
+    // Apply gaussian blur filter with radius of 30
+    CIFilter *gaussianBlurFilter = [CIFilter filterWithName: @"CIGaussianBlur"];
+    [gaussianBlurFilter setValue:clampFilter.outputImage forKey: @"inputImage"];
+    [gaussianBlurFilter setValue:@2.5 forKey:@"inputRadius"];
+    
+    CIContext *context = [CIContext contextWithOptions:nil];
+    CGImageRef cgImage = [context createCGImage:gaussianBlurFilter.outputImage fromRect:[inputImage extent]];
+    
+    // Set up output context.
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    CGContextRef outputContext = UIGraphicsGetCurrentContext();
+    
+    // Invert image coordinates
+    CGContextScaleCTM(outputContext, 1.0, -1.0);
+    CGContextTranslateCTM(outputContext, 0, -self.view.frame.size.height);
+    
+    // Draw base image.
+    CGContextDrawImage(outputContext, self.view.frame, cgImage);
+    
+    // Apply white tint
+    CGContextSaveGState(outputContext);
+    CGContextSetFillColorWithColor(outputContext, [UIColor colorWithWhite:0.0 alpha:0.0].CGColor);
+    CGContextFillRect(outputContext, self.view.frame);
+    CGContextRestoreGState(outputContext);
+    
+    // Output image is ready.
+    UIImage *outputImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return outputImage;
 }
 
 -(UIImage*) addLogotoImage:(UIImage*)image

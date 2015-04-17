@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3503E5431AE0EA1800CCDDD5 /* Obama.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3503E5421AE0EA1800CCDDD5 /* Obama.jpg */; };
+		3503E54B1AE1041700CCDDD5 /* modi_ndtv.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3503E54A1AE1041700CCDDD5 /* modi_ndtv.jpg */; };
 		3575E1411A95EA0900F1870A /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3575E1401A95EA0900F1870A /* PhotoDetailViewController.m */; };
 		3575E1451A95EC4E00F1870A /* PhotoDetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3575E1431A95EC4E00F1870A /* PhotoDetailCollectionViewCell.m */; };
 		3575E1461A95EC4E00F1870A /* PhotoDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3575E1441A95EC4E00F1870A /* PhotoDetailCollectionViewCell.xib */; };
@@ -33,6 +35,7 @@
 		359EF83B1A96FEA700B53451 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 359EF8351A96FEA700B53451 /* 4.jpg */; };
 		359EF83C1A96FEA700B53451 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 359EF8361A96FEA700B53451 /* 5.jpg */; };
 		359EF83D1A96FEA700B53451 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 359EF8371A96FEA700B53451 /* 6.jpg */; };
+		35BE24BC1AE0DF6B00F30816 /* rahul-gandhi-back_240x180_51429176898.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 35BE24BB1AE0DF6B00F30816 /* rahul-gandhi-back_240x180_51429176898.jpg */; };
 		35D1CF9A1AA43CD500FA4E21 /* GalleryHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D1CF981AA43CD500FA4E21 /* GalleryHeaderView.m */; };
 		35D1CF9B1AA43CD500FA4E21 /* GalleryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35D1CF991AA43CD500FA4E21 /* GalleryHeaderView.xib */; };
 		35FCD0E21ADF84AF00DD8B4F /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FCD0E11ADF84AF00DD8B4F /* ShareViewController.m */; };
@@ -52,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3503E5421AE0EA1800CCDDD5 /* Obama.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Obama.jpg; sourceTree = "<group>"; };
+		3503E54A1AE1041700CCDDD5 /* modi_ndtv.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = modi_ndtv.jpg; sourceTree = "<group>"; };
 		3575E13F1A95EA0900F1870A /* PhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailViewController.h; sourceTree = "<group>"; };
 		3575E1401A95EA0900F1870A /* PhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailViewController.m; sourceTree = "<group>"; };
 		3575E1421A95EC4E00F1870A /* PhotoDetailCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailCollectionViewCell.h; sourceTree = "<group>"; };
@@ -92,6 +97,7 @@
 		359EF8351A96FEA700B53451 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 4.jpg; path = Images/4.jpg; sourceTree = "<group>"; };
 		359EF8361A96FEA700B53451 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 5.jpg; path = Images/5.jpg; sourceTree = "<group>"; };
 		359EF8371A96FEA700B53451 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 6.jpg; path = Images/6.jpg; sourceTree = "<group>"; };
+		35BE24BB1AE0DF6B00F30816 /* rahul-gandhi-back_240x180_51429176898.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rahul-gandhi-back_240x180_51429176898.jpg"; sourceTree = "<group>"; };
 		35D1CF971AA43CD500FA4E21 /* GalleryHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryHeaderView.h; sourceTree = "<group>"; };
 		35D1CF981AA43CD500FA4E21 /* GalleryHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryHeaderView.m; sourceTree = "<group>"; };
 		35D1CF991AA43CD500FA4E21 /* GalleryHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GalleryHeaderView.xib; sourceTree = "<group>"; };
@@ -217,6 +223,9 @@
 		359EF83E1A96FEAD00B53451 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3503E54A1AE1041700CCDDD5 /* modi_ndtv.jpg */,
+				3503E5421AE0EA1800CCDDD5 /* Obama.jpg */,
+				35BE24BB1AE0DF6B00F30816 /* rahul-gandhi-back_240x180_51429176898.jpg */,
 				35FCD0E91AE0016800DD8B4F /* ndtv.png */,
 				35FCD0E71ADFB73700DD8B4F /* template1.jpg */,
 				35FCD0E51ADF96FE00DD8B4F /* template.jpg */,
@@ -240,8 +249,6 @@
 				358AA51F1A8B5A5B009AFEC4 /* Sources */,
 				358AA5201A8B5A5B009AFEC4 /* Frameworks */,
 				358AA5211A8B5A5B009AFEC4 /* Resources */,
-				35DAA9281AB1A9CF0032DC66 /* ShellScript */,
-				35DAA92F1AB1AA9F0032DC66 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -313,12 +320,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3503E5431AE0EA1800CCDDD5 /* Obama.jpg in Resources */,
+				3503E54B1AE1041700CCDDD5 /* modi_ndtv.jpg in Resources */,
 				35D1CF9B1AA43CD500FA4E21 /* GalleryHeaderView.xib in Resources */,
 				35FCD0E81ADFB73700DD8B4F /* template1.jpg in Resources */,
 				359EF83C1A96FEA700B53451 /* 5.jpg in Resources */,
 				359EF83A1A96FEA700B53451 /* 3.jpg in Resources */,
 				35FCD0E61ADF96FE00DD8B4F /* template.jpg in Resources */,
 				358AA5321A8B5A5B009AFEC4 /* Main.storyboard in Resources */,
+				35BE24BC1AE0DF6B00F30816 /* rahul-gandhi-back_240x180_51429176898.jpg in Resources */,
 				358DDAEA1A9C89E700E0DDFB /* GallryHeaderCell.xib in Resources */,
 				358AA5371A8B5A5B009AFEC4 /* LaunchScreen.xib in Resources */,
 				358E148E1A8E0B70000803FA /* PhotoTableViewCell.xib in Resources */,
@@ -342,35 +352,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		35DAA9281AB1A9CF0032DC66 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "./Fabric.framework/run e6a4dfa3aa14e64c3b00fa08234584f9273abfe5 b31e0fa52619ae2f2f388bf7251d88365fa71d23db52f24dde1b2303696d1704";
-		};
-		35DAA92F1AB1AA9F0032DC66 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "./Fabric.framework/run e6a4dfa3aa14e64c3b00fa08234584f9273abfe5 b31e0fa52619ae2f2f388bf7251d88365fa71d23db52f24dde1b2303696d1704";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		358AA51F1A8B5A5B009AFEC4 /* Sources */ = {
